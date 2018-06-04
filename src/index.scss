@@ -1,24 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Noto+Sans');
-
-@mixin break($size) {
-  $breakpoints: (
-    xs: 320px,
-    sm: 480px,
-    ms: 540px,
-    md: 760px,
-    lg: 960px,
-    xl: 1200px
-  );
-
-  @if (map-has-key($breakpoints, $size)) {
-    @media (min-width: map-get($breakpoints, $size)) {
-      @content;
-    }
-  } @else {
-    @warn "$size doesn't exist in $breakpoints.";
-  }
-}
-
+@import url('https://fonts.googleapis.com/css?family=Josefin+sans:400,600|Noto+Sans');
 
 html {
   font-size: 10px;
@@ -36,5 +16,15 @@ ul {
   margin: 0;
   li {
     margin: 0;
+  }
+}
+
+button, a{
+  border:none;
+  cursor:pointer;
+
+  &:focus{
+      outline:none;
+      cursor:pointer;
   }
 }
