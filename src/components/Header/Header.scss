@@ -1,0 +1,18 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.Header-logo {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 3rem;
+}
+
+.Header-nav {
+  display: inline-flex;
+  li {
+    margin-right: 1.6rem;
+  }
+
+}
