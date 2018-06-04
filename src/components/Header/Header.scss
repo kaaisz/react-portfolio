@@ -1,7 +1,15 @@
 .Header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index:1000;
+}
+
+.Header-inner{
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
-  margin-top: 2rem;
 }
 
 .Header-logo {

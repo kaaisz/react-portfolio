@@ -32,7 +32,13 @@ export default class PortfolioItem extends Component{
         </div>
         <div className="PortfolioItem-details">
           <h3>{title}</h3>
-          <p>{categories}</p>
+          <span>
+          {categories.map((category)=>(
+            <span key={category} className="PortfolioItem-category">
+              {category}
+            </span>
+          ))}
+          </span>
         </div>
       </div>
     )

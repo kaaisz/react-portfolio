@@ -1,4 +1,5 @@
 @import '../../styles/config.variables';
+@import '../../styles/config.mixins';
 
 .PortfolioItem{
 }
@@ -33,6 +34,7 @@
 .PortfolioItem-details{
   font-family: 'Josefin Sans', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items:center;
   text-transform: uppercase;
 }
@@ -42,4 +44,20 @@ h3{
   border-bottom:0.2rem solid;
   width:max-content;
   margin-right:1.6rem;
+  margin:2rem 1.6rem 1rem 0;
+
+  @include break(md){
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.PortfolioItem-category{
+  &:after{
+    content:",";
+  }
+
+  &:last-child:after{
+    content:"";
+  }
 }
