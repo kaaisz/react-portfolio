@@ -22,14 +22,6 @@
   flex-direction: column;
   align-items:center;
   text-transform: uppercase;
-}
-
-h3{
-  font-size: 2rem;
-  border-bottom:0.2rem solid;
-  width:max-content;
-  margin-right:1.6rem;
-  margin:2rem 1.6rem 1rem 0;
 
   @include break(md){
     display: flex;
@@ -37,9 +29,17 @@ h3{
   }
 }
 
-.PortfolioItem-title--active{
-  color:$colorRed;
-  transition:.4s color;
+.PortfolioItem-title{
+  font-size: 2rem;
+  border-bottom: 0.2rem solid;
+  width: max-content;
+  margin-right: 1.6rem;
+  margin: 2rem 1.6rem 1rem 0;
+
+  &--active{
+      color:$colorRed;
+      transition:.4s color;
+  }
 }
 
 .PortfolioItem-category{
