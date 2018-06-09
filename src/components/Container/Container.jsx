@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Container.scss';
 
 export default class Container extends Component{
@@ -11,3 +12,7 @@ export default class Container extends Component{
     )
   }
 }
+
+Container.proptypes = {
+  children: PropTypes.object.isRequired,
+};
