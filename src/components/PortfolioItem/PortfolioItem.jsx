@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import cx from 'classnames';//add classnames package.(whatever is available - about part of cx name)
 import PortfolioButton from '../PortfolioButton/PortfolioButton.jsx';
 import './PortfolioItem.scss';
 
@@ -36,7 +37,7 @@ export default class PortfolioItem extends Component {
           }
         </div>
         <div className="PortfolioItem-details">
-          <h3>{title}</h3>
+          <h3 className={cx({"PorfolioItem-title--active" : isHovered})}>{title}</h3>//cx must make it the same with imported one 
           <span>
             {categories.map((category) => (
               <span key={category} className="PortfolioItem-category"

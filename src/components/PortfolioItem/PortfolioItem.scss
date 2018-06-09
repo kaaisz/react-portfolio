@@ -37,6 +37,11 @@ h3{
   }
 }
 
+.PortfolioItem-title--active{
+  color:$colorRed;
+  transition:.4s color;
+}
+
 .PortfolioItem-category{
   &:after{
     content:",";
