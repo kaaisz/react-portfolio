@@ -11,12 +11,12 @@ export const portfolioItems = [
   },
   {
     imageUrl: SmartEstate,
-    title: 'Global Clock',
+    title: 'Smart Estate',
     categories: ['Android', 'Frontend'],
   },
   {
     imageUrl: Photography,
-    title: 'Smart Estate',
+    title: 'Photography',
     categories: ['UI Design', 'Lightroom'],
   },
   {
