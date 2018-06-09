@@ -1,31 +1,33 @@
 import React, { Component } from 'react'
 import './PortfolioItem.scss';
 
-export default class PortfolioItem extends Component{
+export default class PortfolioItem extends Component {
+
   state = {
     isHovered: false,
   }
 
   handleHoverIn = () => {
     this.setState({
-      isHovered:true
+      isHovered: true
     });
   }
 
   handleHoverOut = () => {
     this.setState({
-      isHovered:false
+      isHovered: false
     });
   }
-  render(){
-    const { isHovered } = this.state;
+  render() {
+    const { isHovered  } = this.state;
     const { imageUrl, title, categories } = this.props;
-    return(
-      <div className="PortfolioItem" onMouseOver={this.handleHoverIn}onMouseLeave={this.handleHoverOut}>
+
+    return (
+      <div className="PorfolioItem" onMouseOver={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
         <div className="PortfolioItem-image">
           <img src={imageUrl} alt="Global Clock" />
           {
-            isHoverd &&(
+            isHovered && (
               <button className="PortfolioItem-button">See Project</button>
             )
           }
@@ -33,11 +35,12 @@ export default class PortfolioItem extends Component{
         <div className="PortfolioItem-details">
           <h3>{title}</h3>
           <span>
-          {categories.map((category)=>(
-            <span key={category} className="PortfolioItem-category">
-              {category}
-            </span>
-          ))}
+            {categories.map((category) => (
+              <span key={category} className="PortfolioItem-category"
+              >
+                {category}
+              </span>
+            ))}
           </span>
         </div>
       </div>
