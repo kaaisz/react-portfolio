@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Media from 'react-media';
 import './Header.scss';
 
 export default class Header extends Component {
@@ -7,11 +8,19 @@ export default class Header extends Component {
       <div className="Header">
         <div className="Header-inner">
           <div className="Header-logo">Ayako Sayama</div>
-          <ul className="Header-nav">
-            <li>About Me</li>
-            <li>About Me</li>
-            <li>Contact</li>
-          </ul>
+
+          <Media query="(min-width:540px)">
+          {(matches)=>(
+            matches ?
+            <ul className="Header-nav">
+              <li>About Me</li>
+              <li>About Me</li>
+              <li>Contact</li>
+            </ul>
+            :
+            <img width={20} alt="Menu Icon" src={require("./../../assets/icons/menuIcon.svg")} />
+          )}
+          </Media>
         </div>
       </div>
     )
