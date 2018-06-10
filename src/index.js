@@ -3,6 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+//Surround <App /> with a Router, see the code below: 
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById('root')
+);
 registerServiceWorker();

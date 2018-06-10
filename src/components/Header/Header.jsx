@@ -13,7 +13,7 @@ export default class Header extends Component {
           {(matches)=>(
             matches ?
             <ul className="Header-nav">
-              <li>About Me</li>
+              <li>My Works</li>
               <li>About Me</li>
               <li>Contact</li>
             </ul>
