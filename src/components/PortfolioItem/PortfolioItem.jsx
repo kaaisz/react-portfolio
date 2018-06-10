@@ -23,7 +23,7 @@ export default class PortfolioItem extends Component {
   }
   render() {
     const { isHovered  } = this.state;
-    const { imageUrl, title, categories } = this.props;
+    const { imageUrl, title, categories, id } = this.props;
 
     return (
       <div className="PorfolioItem" onMouseOver={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
@@ -41,8 +41,7 @@ export default class PortfolioItem extends Component {
           <h3 className={cx("PortfolioItem-title",{"PorfolioItem-title--active" : isHovered})}>{title}</h3>
           <span>
             {categories.map((category) => (
-              <span key={category} className="PortfolioItem-category"
-              >
+              <span key={category} className="PortfolioItem-category">
                 {category}
               </span>
             ))}
