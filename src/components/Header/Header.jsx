@@ -14,9 +14,9 @@ export default class Header extends Component {
           {(matches)=>(
             matches ?
             <div className="Header-nav">
-              <NavLink to="/" className="Header-nav-item">My Works</NavLink>
-              <NavLink to="/about" className="Header-nav-item">About Me</NavLink>
-              <NavLink to="/contact" className="Header-nav-item">Contact</NavLink>
+              <NavLink exact to="/" className="Header-nav-item" activeClassName="Header-nav-item--active">My Works</NavLink>
+              <NavLink to="/about" className="Header-nav-item" activeClassName="Header-nav-item--active">About Me</NavLink>
+              <NavLink to="/contact" className="Header-nav-item" activeClassName="Header-nav-item--active">Contact</NavLink>
             </div>
             :
             <img width={20} alt="Menu Icon" src={require("./../../assets/icons/menuIcon.svg")} />
